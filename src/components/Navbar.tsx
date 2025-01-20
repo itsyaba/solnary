@@ -31,7 +31,7 @@ const Navbar = () => {
   return (
     <header
       className={`h-16 flex items-center justify-between font-pontanoSans transition-all duration-300  mx-auto fixed top-0 left-0 right-0 z-50 rounded-xl ${
-        isScrolled ? "w-9/12 top-6 backdrop-blur-2xl " : "w-11/12"
+        isScrolled ? "w-9/12 top-6 backdrop-blur-2xl py-2 px-4" : "w-11/12"
       }`}
     >
       <Link className="" href="/">

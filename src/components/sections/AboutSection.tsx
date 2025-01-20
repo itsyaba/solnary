@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { motion } from "framer-motion";
 import { LampContainer } from "../ui/lamp";
@@ -6,7 +7,6 @@ import { Button } from "../ui/button";
 const AboutSection = () => {
   return (
     <section id="about">
-      {" "}
       <LampContainer>
         <motion.h1
           initial={{ opacity: 0.5, y: 100 }}
