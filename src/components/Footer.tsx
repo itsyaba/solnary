@@ -7,17 +7,22 @@ export default function Page() {
   return (
     <div className="min-h-screen flex flex-col">
       {/* Hero Section */}
-      <main className="flex-1 container mx-auto px-4 py-20 flex flex-col items-center text-center">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter mb-6">
-          Ready to have more impactful conversations?
-        </h1>
-        <p className="text-xl text-muted-foreground mb-8">
-          Be up and running in just a few minutes!
-        </p>
-        <Button size="lg" className="bg-[#F47458] hover:bg-[#E56447] text-white px-8">
-          Contact Sales
-        </Button>
-      </main>
+      <div className="h-[50rem] w-full dark:bg-black bg-white  dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative flex items-center justify-center">
+        {/* Radial gradient for the container to give a faded look */}
+        <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+
+        <main className="flex-1 container mx-auto px-4 py-20 flex flex-col items-center text-center">
+          <h1 className="text-4xl sm:text-7xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-8">
+            Ready to have more impactful conversations?
+          </h1>
+          <p className="text-xl text-muted-foreground mb-8">
+            Be up and running in just a few minutes!
+          </p>
+          <Button size="lg" className="bg-[#F47458] hover:bg-[#E56447] text-white px-8">
+            Contact Sales
+          </Button>
+        </main>
+      </div>
 
       {/* Footer */}
       <footer className="bg-[#0A0F1D] text-gray-400">
