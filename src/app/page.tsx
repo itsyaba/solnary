@@ -1,4 +1,5 @@
 import AboutSection from "@/components/sections/AboutSection";
+import { ContactForm } from "@/components/sections/ContactFormSection";
 import { FAQSection } from "@/components/sections/FaqSection";
 import FrameworksSection from "@/components/sections/FrameworksSection";
 import HeroSection from "@/components/sections/HeroSection";
@@ -17,6 +18,7 @@ const HomePage = () => {
       <ServicesSection />
       <PricingSection />
       <FAQSection />
+      <ContactForm />
     </div>
   );
 };

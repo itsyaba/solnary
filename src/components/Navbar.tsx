@@ -30,16 +30,22 @@ const Navbar = () => {
 
   return (
     <header
-      className={`h-16 flex items-center justify-between font-pontanoSans transition-all duration-300  mx-auto fixed top-0 left-0 right-0 z-50 rounded-xl ${
-        isScrolled ? "w-9/12 top-6 backdrop-blur-2xl py-2 px-4 bg-white/10" : "w-11/12"
+      className={`h-16 w-screen flex items-center justify-around font-pontanoSans transition-all duration-300 mx-auto fixed top-0 left-0 right-0 z-50 rounded-xl overflow-hidden ${
+        isScrolled ? "max-w-[80%] top-6 backdrop-blur-2xl py-2 px-4 bg-white/10" : "max-w-[95%]"
       }`}
     >
-      <Link className="" href="/">
-        <Image src={"/logo.png"} alt="logo" width={240} height={240} className="mt-2" />
-        {/* <span className="text-xl font-stinntUltra ml-2">Soinary.</span> */}
+      <Link href="/">
+        <Image
+          src={"/logo.png"}
+          alt="logo"
+          width={240}
+          height={240}
+          className="mt-2 scale-150 ml-6 lg:scale-100 lg:ml-0"
+        />
       </Link>
-      <nav className=" font-pontanoSans flex items-center justify-between w-full">
-        <div className=" ml-4 hidden md:flex gap-4 sm:gap-6 items-start justify-center">
+      <nav className="font-pontanoSans flex items-center justify-between w-full">
+        {/* Desktop Menu */}
+        <div className="ml-4 hidden md:flex gap-4 sm:gap-6 items-center">
           <Link className="text-md font-medium hover:underline underline-offset-4" href="#home">
             Home
           </Link>
@@ -49,28 +55,32 @@ const Navbar = () => {
           <Link className="text-md font-medium hover:underline underline-offset-4" href="#services">
             Services
           </Link>
-          <Link className="text-md font-medium hover:underline underline-offset-4" href="/pricing">
+          <Link className="text-md font-medium hover:underline underline-offset-4" href="#pricing">
             Pricing
           </Link>
-          <Link className="text-md font-medium hover:underline underline-offset-4" href="/faq">
+          <Link className="text-md font-medium hover:underline underline-offset-4" href="#faq">
             FAQ
           </Link>
-          <Link className="text-md font-medium hover:underline underline-offset-4" href="/contact">
+          <Link className="text-md font-medium hover:underline underline-offset-4" href="#contact">
             Contact
           </Link>
         </div>
-        <div className="flex items-stretch justify-normal gap-3">
-          <Button variant="ghost" size="default">
-            {" "}
-            Register{" "}
-          </Button>
-          <Button variant="default" size="default">
-            {" "}
-            Book a demo{" "}
-          </Button>
+        {/* Buttons */}
+        <div className="hidden md:flex items-center gap-3">
+          <Link href="#contact">
+            <Button variant="ghost" size="default">
+              Register
+            </Button>
+          </Link>
+          <Link href="#contact">
+            <Button variant="default" size="default">
+              Book a demo
+            </Button>
+          </Link>
           <ModeToggle />
         </div>
       </nav>
+      {/* Mobile Menu */}
       <Sheet open={isOpen} onOpenChange={setIsOpen}>
         <SheetTrigger asChild>
           <Button variant="ghost" size="icon" className="md:hidden">
@@ -79,21 +89,49 @@ const Navbar = () => {
           </Button>
         </SheetTrigger>
         <SheetContent side="right">
-          <SheetTitle>{"  "}</SheetTitle>
+          <SheetTitle> </SheetTitle>
           <nav className="flex flex-col gap-4">
             <Link
               className="text-md font-medium hover:underline underline-offset-4"
-              href="#"
+              href="#home"
               onClick={() => setIsOpen(false)}
             >
-              Features
+              Home
             </Link>
             <Link
               className="text-md font-medium hover:underline underline-offset-4"
-              href="#"
+              href="#about"
               onClick={() => setIsOpen(false)}
             >
               About
+            </Link>
+            <Link
+              className="text-md font-medium hover:underline underline-offset-4"
+              href="#services"
+              onClick={() => setIsOpen(false)}
+            >
+              Services
+            </Link>
+            <Link
+              className="text-md font-medium hover:underline underline-offset-4"
+              href="#pricing"
+              onClick={() => setIsOpen(false)}
+            >
+              Pricing
+            </Link>
+            <Link
+              className="text-md font-medium hover:underline underline-offset-4"
+              href="#faq"
+              onClick={() => setIsOpen(false)}
+            >
+              FAQ
+            </Link>
+            <Link
+              className="text-md font-medium hover:underline underline-offset-4"
+              href="#contact"
+              onClick={() => setIsOpen(false)}
+            >
+              Contact
             </Link>
           </nav>
         </SheetContent>

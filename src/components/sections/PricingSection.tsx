@@ -75,7 +75,7 @@ const services = [
 
 export default function PricingSection() {
   return (
-    <div className=" py-20 min-h-screen w-full">
+    <div className=" py-20 min-h-screen w-full" id="pricing">
       <div className="mx-auto px-4 w-full">
         <motion.div
           className="text-center mb-16"

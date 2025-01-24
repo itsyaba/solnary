@@ -60,7 +60,7 @@ export default function ServicesSection() {
 
   const ratings = [
     { label: "INNOVATION", value: 90, color: "bg-cyan-400" },
-    { label: "SECURITY", value: 85, color: "bg-[#F47458]" },
+    { label: "SECURITY", value: 95, color: "bg-[#F47458]" },
     { label: "CREATIVITY", value: 95, color: "bg-blue-500" },
   ];
 
